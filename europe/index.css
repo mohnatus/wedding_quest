@@ -1,0 +1,117 @@
+:root {
+  --field-width: 700px;
+  --field-height: 500px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 140px;
+  height: 125px;
+  padding: 5px;
+}
+
+.card {
+  position: relative;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  background: url('img/back.png') center / cover no-repeat;
+  filter: grayscale(0.5);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.card:hover {
+  filter: grayscale(0);
+}
+
+.card.show {
+  font-size: 12px;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.card.show:before {
+  background: black;
+  z-index: 0;
+}
+
+.card span {
+  position: relative;
+  z-index: 2;
+}
+
+.card:after, .card:before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  opacity: 0.5;
+}
+
+.card.wrong:after {
+  background: red;
+}
+
+.card.right:after {
+  background: green;
+}
+
+.card.show[data-value="france"] {
+  background-image: url('img/france.svg');
+}
+
+.card.show[data-value="belgium"] {
+  background-image: url('img/belgium.jpg');
+}
+
+.card.show[data-value="spane"] {
+  background-image: url('img/spane.jpg');
+}
+
+.card.show[data-value="greece"] {
+  background-image: url('img/greece.jpg');
+}
+
+.card.show[data-value="ireland"] {
+  background-image: url('img/ireland.jpg');
+}
+
+.card.show[data-value="chezh"] {
+  background-image: url('img/chezh.jpg');
+}
+
+.card.show[data-value="norway"] {
+  background-image: url('img/norway.jpg');
+}
+
+.card.show[data-value="poland"] {
+  background-image: url('img/poland.jpg');
+}
+
+.card.show[data-value="lithuania"] {
+  background-image: url('img/lithuania.jpg');
+}
+
+.card.show[data-value="macedonia"] {
+  background-image: url('img/macedonia.jpg');
+}
+
+.card[data-removed]:before,
+.card[data-removed]:after {
+  display: none;
+}
+
+.card[data-removed] span {
+  font-size: 0;
+}
