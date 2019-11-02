@@ -1,0 +1,12 @@
+#hero {
+  background-image: url('img/player.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 64px;
+  height: 64px;
+
+  position: absolute;
+  z-index: 2;
+}

@@ -1,0 +1,11 @@
+#field, .r-table {
+  width: 600px;
+}
+
+.r-table__money {
+  margin-top: 20px;
+}
+
+#start, #win, #replay, #lose {
+  color: white;
+}

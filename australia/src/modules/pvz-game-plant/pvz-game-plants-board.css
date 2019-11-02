@@ -1,0 +1,34 @@
+.plants-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-image: url(img/wood.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+.plant.plant-preview {
+  width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-position: left 10px center;
+  cursor: pointer;
+}
+
+.plant-preview.active:after, .plant-preview:hover:after {
+  content: '';
+  position: absolute;
+  background: goldenrod;
+  opacity: 0.4;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.plant-preview__price {
+  color: white;
+  padding-left: 95px;
+}

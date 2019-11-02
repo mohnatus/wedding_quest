@@ -1,0 +1,37 @@
+
+#field {
+  width: var(--field-height);
+  height: var(--field-width);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.r-table {
+  width: var(--field-height);
+}
+
+.asia-game .r-table__points {
+  font-size: 0;
+}
+
+.asia-game .r-table__points:before, .asia-game .r-table__points .r-table__value {
+  font-size: 20px;
+}
+
+.asia-game .r-table__points:before {
+  content: 'Target: ';
+}
+
+.asia-game .r-table__points .r-table__value:after {
+  content: 'm';
+}
+
+#start, #win, #replay, #lose {
+  color: white;
+}
+
+#lose {
+  font-size: 1.5em;
+}
+

@@ -1,0 +1,27 @@
+
+.enemy {
+  position: absolute;
+  bottom: 10px;
+  width: 120px;
+  height: 120px;
+  background-image: url('img/kengo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+
+.enemy.shot {
+  filter: hue-rotate(120deg);
+}
+
+.enemy[data-lifes="3"] {
+  
+}
+
+.enemy[data-lifes="2"] {
+  
+}
+
+.enemy[data-lifes="1"] {
+  
+}

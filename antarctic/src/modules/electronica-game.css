@@ -1,0 +1,16 @@
+#field {
+  background-image: url('img/mounts.png');
+}
+
+#replay {
+  color: #646464;
+}
+
+.ground {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0;
+  height: 40px;
+
+  background: url('img/ice.jpg') center / auto 40px repeat-x;
+}

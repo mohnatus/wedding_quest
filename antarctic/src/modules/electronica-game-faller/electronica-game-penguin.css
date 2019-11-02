@@ -1,0 +1,22 @@
+
+.penguin {
+  width: 35px;
+  height: 40px;
+
+  position: absolute;
+}
+
+.penguin:before {
+  content: '';
+  background-image: url('img/penguin.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: absolute;
+  left: -20px; 
+  top: 0;
+
+  width: 75px;
+  height: 50px;
+}

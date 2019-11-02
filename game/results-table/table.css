@@ -1,0 +1,11 @@
+.r-table {
+  width: var(--field-width);
+  background: var(--r-table-background);
+
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.r-table__points {
+  margin-bottom: 20px;
+}

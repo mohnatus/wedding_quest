@@ -1,0 +1,13 @@
+.snowflake {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('img/snowflake.png');
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  position: absolute;
+}
