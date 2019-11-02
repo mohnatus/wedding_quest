@@ -1,0 +1,37 @@
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background: url('img/sand.jpg');
+}
+
+.coin {
+  position: absolute;
+  background-image: url('img/coin.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#map {
+  position: absolute;
+  background-image: url('img/bg.png');
+  background-position: left 0 bottom 10px;
+  background-size: auto var(--field-width);
+  background-repeat: repeat-x;
+}
+
+.platform {
+  background: url('img/sand.jpg');
+}
+
+
+.finish {
+  background-image: url('img/flower.png');
+  background-position: center;
+  background-size: 70px;
+}
