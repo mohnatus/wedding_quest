@@ -1,5 +1,6 @@
 import EuropeGame from "../../europe";
 import AfricaGame from "../../africa";
+import AsiaGame from "../../asia";
 
 const createPlayground = (gameName) => {
   let el = document.createElement('div');
@@ -14,6 +15,9 @@ const initGame = (gameName, callback) => {
   let game;
 
   switch(gameName) {
+    case "asia":
+      game = new AsiaGame(playground);
+      break;
     case "europe":
       game = new EuropeGame(playground);
       break;

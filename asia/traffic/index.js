@@ -1,8 +1,8 @@
-import RaceGameCar from "../race-game-car/race-game-car";
+import Car from "./car";
 import getRandom from "get-random-integer";
 import Dispatcher from "events-dispatch";
 
-class RaceGameTraffic {
+class Traffic {
   constructor(game, config) {
     new Dispatcher(this);
 
@@ -14,8 +14,8 @@ class RaceGameTraffic {
       maxCarSpeed: 1.6
     }, config);
 
-    RaceGameCar.maxSpeed = this.config.maxCarSpeed;
-    RaceGameCar.minSpeed = this.config.minCarSpeed;
+    Car.maxSpeed = this.config.maxCarSpeed;
+    Car.minSpeed = this.config.minCarSpeed;
     
     this.game = game;
 
@@ -29,11 +29,11 @@ class RaceGameTraffic {
   }
 
   get startBottomPosition() {
-    return this.game.field.element.offsetHeight - this.track.bottom + RaceGameCar.height;
+    return this.game.field.offsetHeight - this.track.bottom + Car.height;
   }
 
   get finishBottomPosition() {
-    return -2 * RaceGameCar.height;
+    return -2 * Car.height;
   }
 
   get startLeftPosition() {
@@ -94,7 +94,7 @@ class RaceGameTraffic {
   }
 
   createCar() {
-    let car = new RaceGameCar();
+    let car = new Car();
     this.cars.push(car);
     car.bottom = this.startBottomPosition;
     car.left = this.startLeftPosition;
@@ -112,4 +112,4 @@ class RaceGameTraffic {
   }
 }
 
-export default RaceGameTraffic;
+export default Traffic;

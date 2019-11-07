@@ -8,16 +8,16 @@ const showScreen = (index) => {
   currentScreen = index;
   let screen = screens[currentScreen];
 
-  if (screen.game) {
-    updateScreen(null);
-    initGame(screen.game, () => {
+  updateScreen(screen, () => {
+    if (screen.game) {
+      updateScreen(null);
+      initGame(screen.game, () => {
+        showScreen(index + 1);
+      });
+    } else {
       showScreen(index + 1);
-    });
-  } else {
-    updateScreen(screen, () => {
-      showScreen(index + 1);
-    });
-  }
+    }
+  });
 }
 
-showScreen(16);
+showScreen(5);
