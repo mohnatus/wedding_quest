@@ -1,4 +1,4 @@
-import PvZGameEnemy from "./pvz-game-enemy/pvz-game-enemy";
+import Enemy from "./enemy";
 
 const attacks = [
   {
@@ -19,7 +19,7 @@ const attacks = [
   }
 ];
 
-class PvZGameAttackController {
+class AttackController {
   constructor(game) {
     this.game = game;
     this.index = -1;
@@ -86,7 +86,7 @@ class PvZGameAttackController {
       let lineIndex = Math.floor(Math.random() * 3);
       let line = this.game.lines[lineIndex];
 
-      let enemy = new PvZGameEnemy();
+      let enemy = new Enemy();
 
       count++;
 
@@ -111,4 +111,4 @@ class PvZGameAttackController {
 
 }
 
-export default PvZGameAttackController;
+export default AttackController;

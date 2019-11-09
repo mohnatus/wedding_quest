@@ -1,6 +1,4 @@
-import "./pvz-game-enemy.css";
-
-class PvZGameEnemy {
+class Enemy {
   constructor(lifes) {
     this.el = this.render();
     this.lifes = 4;
@@ -38,4 +36,4 @@ class PvZGameEnemy {
   }
 }
 
-export default PvZGameEnemy;
+export default Enemy;

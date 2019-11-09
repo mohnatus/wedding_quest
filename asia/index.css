@@ -1,11 +1,11 @@
-.car {
+.asia-game .car {
   width: 30px;
   height: 50px;
 
   position: absolute;
 }
 
-.car:before {
+.asia-game .car:before {
   content: '';
   background-image: url('img/green-car.png');
   background-position: center;
@@ -20,19 +20,19 @@
   height: 72px;
 }
 
-.car-1:before {
+.asia-game .car-1:before {
   background-image: url('img/red-car.png');
 }
 
-.car-2:before {
+.asia-game .car-2:before {
   background-image: url('img/blue-car.png');
 }
 
-.car-3:before {
+.asia-game .car-3:before {
   background-image: url('img/yellow-car.png');
 }
 
-#hero {
+.asia-game #hero {
   background-image: url('img/player.png');
   background-position: center;
   background-size: contain;
@@ -45,7 +45,7 @@
   z-index: 2;
 }
 
-#track {
+.asia-game #track {
   position: absolute;
   left: 0;
   right: 0;
@@ -57,7 +57,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#track:before {
+.asia-game #track:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -70,7 +70,7 @@
   border-color: white;
 }
 
-#track .sign {
+.asia-game #track .sign {
   position: absolute;
   right: 0;
   left: 0;
@@ -83,7 +83,7 @@
   padding-right: 25px;
 }
 
-#track .sign:after {
+.asia-game #track .sign:after {
   content: '';
   position: absolute;
   width: 20px;
@@ -94,7 +94,7 @@
   margin-left: 5px;
 }
 
-#track .finish {
+.asia-game #track .finish {
   position: absolute;
   left: 0;
   right: 0;
@@ -102,7 +102,7 @@
   color: white;
 }
 
-#track .finish:after {
+.asia-game #track .finish:after {
   content: '';
   display: block;
   width: 100%;

@@ -1,9 +1,7 @@
-import './pvz-game-line.css';
-
-import PvZGameLineSpot from "./pvz-game-line-spot";
+import Spot from "./spot";
 import Dispatcher from 'events-dispatch';
 
-class PvZGameLine {
+class Line {
   constructor(game, config) {
     new Dispatcher(this);
 
@@ -28,7 +26,7 @@ class PvZGameLine {
     element.style.bottom = (this.index - 1) * 100 + 'px';
 
     for (let i = 0; i < 5; i++) {
-      let spot = new PvZGameLineSpot(i, this);
+      let spot = new Spot(i, this);
       this.spots.push(spot);
       spot.element.addEventListener('click', () => {
         if (this.active) {
@@ -148,4 +146,4 @@ class PvZGameLine {
   }
 }
 
-export default PvZGameLine;
+export default Line;

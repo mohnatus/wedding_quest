@@ -1,9 +1,8 @@
-import "./pvz-game-plant.css";
 import Dispatcher from "events-dispatch";
 
 let counter = 0;
 
-class PvZGamePlant {
+class Plant {
   constructor() {
     this.index = ++counter;
     new Dispatcher(this);
@@ -68,6 +67,6 @@ class PvZGamePlant {
   }
 }
 
-PvZGamePlant.plantName = "plant";
+Plant.plantName = "plant";
 
-export default PvZGamePlant;
+export default Plant;

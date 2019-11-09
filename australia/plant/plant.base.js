@@ -1,7 +1,7 @@
-import PvZGamePlant from "./pvz-game-plant";
+import Plant from ".";
 
 
-class PvZGamePlantBase extends PvZGamePlant {
+class PlantBase extends Plant {
   constructor(shot = 1, ...data) {
     super(...data);
 
@@ -25,7 +25,7 @@ class PvZGamePlantBase extends PvZGamePlant {
     this.timeout = setTimeout(() => {
       if (this.stopped) return;
       this._iterate();
-    }, PvZGamePlantBase.executeInterval)
+    }, PlantBase.executeInterval)
   }
 
   _createBullet() {
@@ -55,8 +55,8 @@ class PvZGamePlantBase extends PvZGamePlant {
   }
 }
 
-PvZGamePlantBase.plantName = "base";
-PvZGamePlantBase.price = 100;
-PvZGamePlantBase.executeInterval = 2000;
+PlantBase.plantName = "base";
+PlantBase.price = 100;
+PlantBase.executeInterval = 2000;
 
-export default PvZGamePlantBase;
+export default PlantBase;

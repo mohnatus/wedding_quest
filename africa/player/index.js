@@ -35,6 +35,7 @@ class Player extends player.Mover {
   }
 
   canMove(direction) {
+    
     if (!this.game.canMove(this, direction)) {
       this.mapBoundary = true;
       return false;

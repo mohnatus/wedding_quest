@@ -1,6 +1,7 @@
 import EuropeGame from "../../europe";
 import AfricaGame from "../../africa";
 import AsiaGame from "../../asia";
+import AustraliaGame from "../../australia";
 
 const createPlayground = (gameName) => {
   let el = document.createElement('div');
@@ -24,10 +25,14 @@ const initGame = (gameName, callback) => {
     case "africa":
       game = new AfricaGame(playground);
       break;
+    case "australia":
+      game = new AustraliaGame(playground);
+      break;
   }
 
   if (game) {
-    game.on("win", () => {
+    game.once("win", () => {
+      game = null;
       playground.remove();
       callback();
     });

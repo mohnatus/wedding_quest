@@ -1,20 +1,18 @@
 import Dispatcher from "events-dispatch";
 
-import "./pvz-game-plants-board.css";
+import Base from "./plant.base";
+import Power from "./plant.power";
+import Money from "./plant.money";
 
-import PvZGamePlantBase from "./pvz-game-plant-base";
-import PvZGamePlantPower from "./pvz-game-plant-power";
-import PvZGamePlantMoney from "./pvz-game-plant-money";
-
-class PvZGamePlantsBoard {
+class Board {
   constructor(game) {
     new Dispatcher(this);
     this.game = game;
 
     this.plants = [
-      PvZGamePlantMoney,
-      PvZGamePlantBase,
-      PvZGamePlantPower,
+      Money,
+      Base,
+      Power,
     ];
 
     this.element = this.render();
@@ -86,4 +84,4 @@ class PvZGamePlantsBoard {
   }
 }
 
-export default PvZGamePlantsBoard;
+export default Board;

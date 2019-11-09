@@ -1,4 +1,4 @@
-class PvZGameLineSpot {
+class Spot {
   constructor(index, line) {
     this.index = index;
     this.line = line;
@@ -31,4 +31,4 @@ class PvZGameLineSpot {
   }
 }
 
-export default PvZGameLineSpot;
+export default Spot;

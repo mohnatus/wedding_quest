@@ -1,4 +1,4 @@
-class PvZGameSetController {
+class SetController {
   constructor(game) {
     this.game = game;
     this.pause = true;
@@ -55,4 +55,4 @@ class PvZGameSetController {
   }
 }
 
-export default PvZGameSetController;
+export default SetController;

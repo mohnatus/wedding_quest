@@ -5,6 +5,7 @@ import initGame from "./utils/init.game";
 let currentScreen = 0;
 
 const showScreen = (index) => {
+  console.log('show screen ', index)
   currentScreen = index;
   let screen = screens[currentScreen];
 
@@ -20,4 +21,4 @@ const showScreen = (index) => {
   });
 }
 
-showScreen(5);
+showScreen(24);

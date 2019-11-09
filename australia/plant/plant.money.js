@@ -1,6 +1,6 @@
-import PvZGamePlant from "./pvz-game-plant";
+import Plant from ".";
 
-class PvZGamePlantMoney extends PvZGamePlant {
+class PlantMoney extends Plant {
   constructor(...data) {
     super(...data);
 
@@ -28,7 +28,7 @@ class PvZGamePlantMoney extends PvZGamePlant {
     this.bg = bg;
     view.addEventListener('click', () => {
       if (this.ready) {
-        this.line.game.money = this.line.game.money + PvZGamePlantMoney.price;
+        this.line.game.money = this.line.game.money + PlantMoney.price;
         this.ready = false;
         this.bg.style.height = 0;
         this._startTimer();
@@ -48,11 +48,11 @@ class PvZGamePlantMoney extends PvZGamePlant {
       
       clearInterval(this.updateTimer);
       this.ready = true;
-    }, PvZGamePlantMoney.executeInterval)
+    }, PlantMoney.executeInterval)
 
     this.updateTimer = setInterval(() => {
       let now = Date.now();
-      let percent = (now - this.startTime) * 100 / (PvZGamePlantMoney.executeInterval - 5);
+      let percent = (now - this.startTime) * 100 / (PlantMoney.executeInterval - 5);
       this.bg.style.height = percent + '%';
     }, 100);
     
@@ -64,8 +64,8 @@ class PvZGamePlantMoney extends PvZGamePlant {
 
 }
 
-PvZGamePlantMoney.plantName = "money";
-PvZGamePlantMoney.price = 50;
-PvZGamePlantMoney.executeInterval = 5000;
+PlantMoney.plantName = "money";
+PlantMoney.price = 50;
+PlantMoney.executeInterval = 5000;
 
-export default PvZGamePlantMoney;
+export default PlantMoney;
