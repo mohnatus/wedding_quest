@@ -2,6 +2,8 @@ import EuropeGame from "../../europe";
 import AfricaGame from "../../africa";
 import AsiaGame from "../../asia";
 import AustraliaGame from "../../australia";
+import AntarcticaGame from "../../antarctica";
+import AmericaGame from "../../america";
 
 const createPlayground = (gameName) => {
   let el = document.createElement('div');
@@ -27,6 +29,12 @@ const initGame = (gameName, callback) => {
       break;
     case "australia":
       game = new AustraliaGame(playground);
+      break;
+    case "antarctica":
+      game = new AntarcticaGame(playground);
+      break;
+    case "america":
+      game = new AmericaGame(playground);
       break;
   }
 

@@ -1,0 +1,27 @@
+.game-america .block {
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+.game-america .wall {
+  background-color: #000;
+}
+
+.game-america .me {
+  position: relative;
+}
+
+.game-america .me:after {
+  background-color: #23afee;
+  border-radius: 100%;
+  content: '';
+  height: 20px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.game-america .finish {
+  background-color: #f31d1d;
+}

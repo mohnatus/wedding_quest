@@ -1,6 +1,5 @@
-import "./index.css";
-
 import * as player from "../../game/player";
+import "./index.css";
 
 class Player extends player.Mover {
   constructor(game) {

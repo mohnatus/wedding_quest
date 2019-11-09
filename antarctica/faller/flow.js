@@ -1,7 +1,7 @@
 import random from "get-random-integer";
 import Dispatcher from "events-dispatch";
 
-class ElectronicaGameFlow {
+class Flow {
   constructor(game, config) {
     new Dispatcher(this);
 
@@ -18,7 +18,7 @@ class ElectronicaGameFlow {
 
   _generateElement() {
     let flowElement = new this.element(this.game);
-    this.game.field.addElement(flowElement.element);
+    this.game.field.appendChild(flowElement.element);
 
     let watcher = this.game.intersector.watch(flowElement.element, this.game.hero.element);
     this.elements[watcher] = flowElement;
@@ -48,4 +48,4 @@ class ElectronicaGameFlow {
   }
 }
 
-export default ElectronicaGameFlow;
+export default Flow;

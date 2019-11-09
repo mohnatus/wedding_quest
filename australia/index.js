@@ -94,13 +94,14 @@ class AustraliaGame {
     this.trigger("win");
   }
 
-  _onLose() {
+  lose() {
     this.monitored = false;
     this.setController.reset();
     this.attackController.reset();
     this.table.update({
       "money": this._startMoney
     })
+    this.field.onLose(() => this.start());
   }
 }
 

@@ -1,12 +1,10 @@
-import "./electronica-game-hero.css";
 
-import Mover from "furrygame/game-player/mover";
-import KeyboardMover from "furrygame/game-player/keyboard-mover";
+import * as player from "../../game/player";
 
-class ElectronicaGameHero extends Mover {
+class Hero extends player.Mover {
   constructor(game) {
     let element = document.createElement('div');
-    element.id = "hero";
+    element.id = "player";
 
     super(element, {
       speed: { up: 0, down: 0, left: 5, right: 5 },
@@ -15,7 +13,7 @@ class ElectronicaGameHero extends Mover {
 
       diff: { left: 10, right: 10 }
     });
-    new KeyboardMover(this);
+    new player.KeyboardMover(this);
   }
 
   canMove(direction) {
@@ -24,4 +22,4 @@ class ElectronicaGameHero extends Mover {
   }
 }
 
-export default ElectronicaGameHero;
+export default Hero;
