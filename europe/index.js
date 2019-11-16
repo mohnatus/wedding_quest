@@ -1,7 +1,9 @@
-import cards from "./cards";
+import { cards, images } from "./cards";
 import "./index.css";
 
 import Dispatcher from "events-dispatch";
+
+let clicks = 0;
 
 class EuropeGame {
   constructor(element, config = {}) {
@@ -19,6 +21,31 @@ class EuropeGame {
 
     this.selected = null;
     this.inProcess = false;
+
+    this.image = this.createImage();
+    this.field.appendChild(this.image.wrapper);
+  }
+
+  createImage() {
+    let wrapper = document.createElement('div');
+    wrapper.className = "image";
+    wrapper.style.display = "none";
+    let imgWrapper = document.createElement('div');
+    imgWrapper.className = "image__wrapper";
+    wrapper.appendChild(imgWrapper);
+    let img = document.createElement('img');
+    imgWrapper.appendChild(img);
+    let text = document.createElement('div');
+    text.className = "image__text";
+    wrapper.appendChild(text);
+    let button = document.createElement('button');
+    button.type = "button";
+    button.textContent = "Продолжить";
+    wrapper.appendChild(button);
+
+    return {
+      wrapper, img, text, button,
+    };
   }
 
   createRandomMap(cards, width, height) {
@@ -84,9 +111,22 @@ class EuropeGame {
     }
   }
 
+  showImage(img) {
+    this.image.img.src = img.img;
+    this.image.text.innerHTML = img.text;
+    this.image.wrapper.style.display = "";
+
+    this.image.button.onclick = () => {
+      this.image.wrapper.style.display ="none";
+      if (!this.cards.length) this.win();
+    };
+  }
+
   onCardClick(card) {
     if (card == this.selected || this.inProcess) return;
     if (card.removed) return;
+
+    clicks++;
 
     card.classList.add('show');
     card.clicks++;
@@ -109,7 +149,7 @@ class EuropeGame {
           let points = Math.max(1, 15 - card.clicks - this.selected.clicks);
           this.points = this.points + points;
 
-          if (!this.cards.length) this.win();
+          
 
           setTimeout(() => {
             this.selected.removed = true;
@@ -120,6 +160,10 @@ class EuropeGame {
             this.selected = null;
 
             this.inProcess = false;
+
+            this.showImage(images[card.value]);
+
+            
           }, 400);
 
         } else {
@@ -154,7 +198,7 @@ class EuropeGame {
   }
 
   win() {
-    this.trigger("win");
+    this.trigger("win", 1000/clicks * 2 + 500);
   }
 }
 

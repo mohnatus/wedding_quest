@@ -12,6 +12,8 @@ const createPlayground = (gameName) => {
   return el;
 };
 
+let points = 0;
+
 const initGame = (gameName, callback) => {
   let playground = createPlayground(gameName);
   document.body.appendChild(playground);
@@ -39,7 +41,8 @@ const initGame = (gameName, callback) => {
   }
 
   if (game) {
-    game.once("win", () => {
+    game.once("win", (gamePoints) => {
+      points += gamePoints;
       game = null;
       playground.remove();
       callback();

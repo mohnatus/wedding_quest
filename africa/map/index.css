@@ -1,4 +1,4 @@
-.ground {
+.game-africa .ground {
   position: absolute;
   bottom: 0;
   left: 0; right: 0;
@@ -9,7 +9,7 @@
   background: url('img/sand.jpg');
 }
 
-.coin {
+.game-africa .coin {
   position: absolute;
   background-image: url('img/coin.jpg');
   background-position: center;
@@ -17,7 +17,7 @@
   background-size: contain;
 }
 
-#map {
+.game-africa #map {
   position: absolute;
   background-image: url('img/bg.png');
   background-position: left 0 bottom 10px;
@@ -25,12 +25,12 @@
   background-repeat: repeat-x;
 }
 
-.platform {
+.game-africa .platform {
   background: url('img/sand.jpg');
 }
 
 
-.finish {
+.game-africa .finish {
   background-image: url('img/flower.png');
   background-position: center;
   background-size: 70px;

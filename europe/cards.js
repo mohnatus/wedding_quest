@@ -30,4 +30,47 @@ const cards = [
   {text: 'Македония',value: 'macedonia',},
 ];
 
-export default cards;
+const images = {
+  'france': {
+    img: 'img/compromat/1.jpeg',
+    text: 'Гладил полотенчики!',
+  },
+  'belgium': {
+    img: 'img/compromat/2.jpg',
+    text: 'Плескался в ванной с пеной и резиновым утенком!',
+  },
+  'spane': {
+    img: 'img/compromat/2.jpg_large',
+    text: 'Ходил на быстрые свидания!',
+  },
+  'greece': {
+    img: 'img/compromat/3.jpg',
+    text: 'Возил куколку в коляске!',
+  },
+  'ireland': {
+    img: 'img/compromat/4.jpg',
+    text: 'Читал близнецам сказки!',
+  },
+  'chezh': {
+    img: 'img/compromat/5.jpg',
+    text: 'Делал добрые дела!',
+  },
+  'norway': {
+    img: 'img/compromat/6.jpg',
+    text: 'Играл с котятами!',
+  },
+  'poland': {
+    img: 'img/compromat/7.jpg',
+    text: 'Дирижировал оркестром!',
+  },
+  'lithuania': {
+    img: 'img/compromat/8.jpg',
+    text: 'Питался фастфудом!',
+  },
+  'macedonia': {
+    img: 'img/compromat/9.jpg',
+    text: 'Мыл тарелочки!',
+  },
+};
+
+export { cards, images };

@@ -1,6 +1,6 @@
 :root {
   --body-background: black;
-  --content-background: #aaa;
+  --content-background: white;
   --content-border: transparent;
   --content-color: black;
   --button-background: lime;
@@ -16,7 +16,7 @@
 body {
   font-family: 'Roboto Mono', sans-serif;
   font-size: 20px;
-  background: var(--body-background);
+  background: var(--body-background) url(img/pixels.jpg);
 }
 
 .screen {

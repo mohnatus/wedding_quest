@@ -19,7 +19,7 @@ class AsiaGame {
     /** Таблица результатов */
     this.table = game.GameTable({
       "points": {
-        name: "Метры",
+        name: "До цели",
         value: this._distance
       },
       "lives": {
@@ -87,7 +87,7 @@ class AsiaGame {
   }
 
   win() {
-    this.trigger("win");
+    this.trigger("win", this.lives * 100);
   }
 
   lose() {

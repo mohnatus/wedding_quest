@@ -6,7 +6,7 @@ class Player extends player.Mover {
     element.id = "hero";
 
     super(element, {
-      speed: { up: 9, down: 9, left: 12, right: 12 },
+      speed: { up: 7, down: 7, left: 6, right: 6 },
 
       field: game.field,
 
