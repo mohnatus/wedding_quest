@@ -1,11 +1,12 @@
-.asia-game .car {
+
+.game-asia .car {
   width: 30px;
   height: 50px;
 
   position: absolute;
 }
 
-.asia-game .car:before {
+.game-asia .car:before {
   content: '';
   background-image: url('img/green-car.png');
   background-position: center;
@@ -20,19 +21,19 @@
   height: 72px;
 }
 
-.asia-game .car-1:before {
+.game-asia .car-1:before {
   background-image: url('img/red-car.png');
 }
 
-.asia-game .car-2:before {
+.game-asia .car-2:before {
   background-image: url('img/blue-car.png');
 }
 
-.asia-game .car-3:before {
+.game-asia .car-3:before {
   background-image: url('img/yellow-car.png');
 }
 
-.asia-game #hero {
+.game-asia #hero {
   background-image: url('img/player.png');
   background-position: center;
   background-size: contain;
@@ -45,7 +46,7 @@
   z-index: 2;
 }
 
-.asia-game #track {
+.game-asia #track {
   position: absolute;
   left: 0;
   right: 0;
@@ -54,10 +55,10 @@
 
   height: 2500px;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #aaa;
 }
 
-.asia-game #track:before {
+.game-asia #track:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -70,7 +71,7 @@
   border-color: white;
 }
 
-.asia-game #track .sign {
+.game-asia #track .sign {
   position: absolute;
   right: 0;
   left: 0;
@@ -83,7 +84,7 @@
   padding-right: 25px;
 }
 
-.asia-game #track .sign:after {
+.game-asia #track .sign:after {
   content: '';
   position: absolute;
   width: 20px;
@@ -94,7 +95,7 @@
   margin-left: 5px;
 }
 
-.asia-game #track .finish {
+.game-asia #track .finish {
   position: absolute;
   left: 0;
   right: 0;
@@ -102,7 +103,7 @@
   color: white;
 }
 
-.asia-game #track .finish:after {
+.game-asia #track .finish:after {
   content: '';
   display: block;
   width: 100%;
@@ -119,19 +120,19 @@
   width: var(--field-height);
 }
 
-.asia-game .r-table__points {
+.game-asia .r-table__points {
   font-size: 0;
 }
 
-.asia-game .r-table__points:before, .asia-game .r-table__points .r-table__value {
+.game-asia .r-table__points:before, .game-asia .r-table__points .r-table__value {
   font-size: 20px;
 }
 
-.asia-game .r-table__points:before {
+.game-asia .r-table__points:before {
   content: 'Target: ';
 }
 
-.asia-game .r-table__points .r-table__value:after {
+.game-asia .r-table__points .r-table__value:after {
   content: 'm';
 }
 

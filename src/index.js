@@ -1,3 +1,5 @@
+import "./index.css";
+
 import screens from "./screens";
 import updateScreen from "./utils/update.screen";
 import initGame from "./utils/init.game";
@@ -5,7 +7,6 @@ import initGame from "./utils/init.game";
 let currentScreen = 0;
 
 const showScreen = (index) => {
-  console.log('show screen ', index)
   currentScreen = index;
   let screen = screens[currentScreen];
 
@@ -21,4 +22,4 @@ const showScreen = (index) => {
   });
 }
 
-showScreen(0);
+showScreen(18);

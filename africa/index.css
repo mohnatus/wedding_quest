@@ -1,4 +1,23 @@
+.game-africa .game-table {
+  width: 600px;
+}
+
 .game-africa .game-field {
   position: relative;
   height: 400px;
+  width: 600px;
+}
+
+.game-africa #hero {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  background-image: url('img/player.png');
+  background-position: left 50% bottom -5px;
+  z-index: 20;
+
+  width: 50px;
+  height: 50px;
 }

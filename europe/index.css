@@ -1,19 +1,19 @@
-:root {
-  --field-width: 700px;
-  --field-height: 500px;
+.game-europe {
+  padding-top: 50px;
 }
 
-.row {
+.game-europe .row {
   display: flex;
+  justify-content: center;
 }
 
-.cell {
+.game-europe .cell {
   width: 140px;
   height: 125px;
   padding: 5px;
 }
 
-.card {
+.game-europe .card {
   position: relative;
   font-size: 12px;
   width: 100%;
@@ -30,28 +30,28 @@
   color: white;
 }
 
-.card:hover {
+.game-europe .card:hover {
   filter: grayscale(0);
 }
 
-.card.show {
+.game-europe .card.show {
   font-size: 12px;
 
   background-position: center;
   background-size: cover;
 }
 
-.card.show:before {
+.game-europe .card.show:before {
   background: black;
   z-index: 0;
 }
 
-.card span {
+.game-europe .card span {
   position: relative;
   z-index: 2;
 }
 
-.card:after, .card:before {
+.game-europe .card:after, .card:before {
   content: '';
   position: absolute;
   top: 0; bottom: 0;
@@ -59,59 +59,59 @@
   opacity: 0.5;
 }
 
-.card.wrong:after {
+.game-europe .card.wrong:after {
   background: red;
 }
 
-.card.right:after {
+.game-europe .card.right:after {
   background: green;
 }
 
-.card.show[data-value="france"] {
+.game-europe .card.show[data-value="france"] {
   background-image: url('img/france.svg');
 }
 
-.card.show[data-value="belgium"] {
+.game-europe .card.show[data-value="belgium"] {
   background-image: url('img/belgium.jpg');
 }
 
-.card.show[data-value="spane"] {
+.game-europe .card.show[data-value="spane"] {
   background-image: url('img/spane.jpg');
 }
 
-.card.show[data-value="greece"] {
+.game-europe .card.show[data-value="greece"] {
   background-image: url('img/greece.jpg');
 }
 
-.card.show[data-value="ireland"] {
+.game-europe .card.show[data-value="ireland"] {
   background-image: url('img/ireland.jpg');
 }
 
-.card.show[data-value="chezh"] {
+.game-europe .card.show[data-value="chezh"] {
   background-image: url('img/chezh.jpg');
 }
 
-.card.show[data-value="norway"] {
+.game-europe .card.show[data-value="norway"] {
   background-image: url('img/norway.jpg');
 }
 
-.card.show[data-value="poland"] {
+.game-europe .card.show[data-value="poland"] {
   background-image: url('img/poland.jpg');
 }
 
-.card.show[data-value="lithuania"] {
+.game-europe .card.show[data-value="lithuania"] {
   background-image: url('img/lithuania.jpg');
 }
 
-.card.show[data-value="macedonia"] {
+.game-europe .card.show[data-value="macedonia"] {
   background-image: url('img/macedonia.jpg');
 }
 
-.card[data-removed]:before,
-.card[data-removed]:after {
+.game-europe .card[data-removed]:before,
+.game-europe .card[data-removed]:after {
   display: none;
 }
 
-.card[data-removed] span {
+.game-europe .card[data-removed] span {
   font-size: 0;
 }

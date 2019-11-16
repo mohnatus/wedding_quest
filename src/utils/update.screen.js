@@ -7,12 +7,13 @@ const show = el => {
 }
 
 let updateScreen = (() => {
-  let screen = document.querySelector('.game-screen');
-  let pic = screen.querySelector('.screen__pic');
-  let img = pic.querySelector('.screen__img');
-  let title = screen.querySelector('.screen__title');
-  let text = screen.querySelector('.screen__text');
-  let next = screen.querySelector('.screen__next');
+  let screen = document.querySelector(".game-screen");
+  let pic = screen.querySelector(".screen__pic");
+  let img = pic.querySelector(".screen__img");
+  let title = screen.querySelector(".screen__title");
+  let text = screen.querySelector(".screen__text");
+  let next = screen.querySelector(".screen__next");
+  let nextText = next.querySelector("b");
 
   
   const reset = () => {
@@ -21,6 +22,7 @@ let updateScreen = (() => {
     show(title);
     show(text);
     pic.removeAttribute("data-map");
+    screen.removeAttribute("data-class");
   }
 
   return (data, nextCallback) => {
@@ -30,6 +32,8 @@ let updateScreen = (() => {
     }
 
     reset();
+
+    screen.setAttribute("data-class", data.class);
 
     if (data.img) {
       img.src = data.img;
@@ -56,9 +60,9 @@ let updateScreen = (() => {
     }
 
     if (data.next) {
-      next.textContent = data.next;
+      nextText.textContent = data.next;
     } else {
-      next.textContent = "Дальше";
+      nextText.textContent = "Дальше";
     }
 
     next.onclick = () => nextCallback();

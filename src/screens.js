@@ -30,7 +30,6 @@ const screens = [
   },{ // 6 pizdrik
     class: "pizdrik",
     img: "img/pr-pizdrik.png",
-    imgStyle: "position: relative; left: -2px;",
     title: "Профессор Пиздрик",
     text: `<p>Знаменитый профессор был очень обрадован, увидев старого друга.</p>
     <p>Но услышав о похищении Ахинеи, пришел в сильное волнение.</p>`
@@ -84,6 +83,7 @@ const screens = [
     game: "africa"
   },{ // 18 find-flower
     class: "find-flower",
+    img: "flower",
     title: "Великолепно!",
     text: `<p>Пупок Джонс нашел редкий цветок в подарок для своей возлюбленной!</p>`
   },{ // 19 late
