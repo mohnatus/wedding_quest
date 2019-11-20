@@ -13,7 +13,7 @@ class AntarcticaGame {
   constructor(element, config = {}) {
     new Dispatcher(this);
 
-    this.startLives = config.lives || 3;
+    this.startLives = config.lives || 10;
 
     this._points = 0;
     this.pointsToWin = 2;

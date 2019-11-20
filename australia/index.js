@@ -11,7 +11,7 @@ class AustraliaGame {
   constructor(element, config = {}) {
     new Dispatcher(this);
 
-    this._startMoney = config.money || 800;
+    this._startMoney = config.money || 90;
     this._money = 0;
 
     /** Таблица результатов */

@@ -15,6 +15,55 @@ let updateScreen = (() => {
   let next = screen.querySelector(".screen__next");
   let nextText = next.querySelector("b");
 
+  const initTask = (data, onWin) => {
+    if (data.task === "word") {
+      let input = document.createElement('input');
+      input.type = "text";
+      input.className = "input";
+
+      input.oninput = (e) => {
+        let value = input.value.toLowerCase();
+        if (data.answer.indexOf(value) !== -1) {
+          input.classList.add("success");
+          input.disabled = true;
+          onWin();
+        }
+      }
+
+      text.appendChild(input);
+    } else if (data.task === "choise") {
+
+      let els = [];
+      data.variants.forEach(variant => {
+        let el = document.createElement('button');
+        el.type = "button";
+        el.className = "variant";
+        el.textContent = variant.text;
+
+        let message = document.createElement('div');
+        message.innerHTML = variant.message;
+       
+        message.className = "message";
+
+        els.push(el);
+        el.onclick = (e) => {
+          if (variant.exit) {
+            els.forEach(b => b.disabled = true);
+            el.classList.add("success");
+            onWin();
+          } else {
+            el.classList.add("error");
+            el.disabled = true;
+          }
+        }
+
+        text.appendChild(el);
+        text.appendChild(message);
+        
+      })
+      show(text);
+    }
+  }
   
   const reset = () => {
     show(pic);
@@ -63,6 +112,14 @@ let updateScreen = (() => {
       nextText.textContent = data.next;
     } else {
       nextText.textContent = "Дальше";
+    }
+
+    if (data.task) {
+      next.disabled = true;
+
+      initTask(data, () => {
+        next.disabled = false;
+      })
     }
 
     next.onclick = () => nextCallback();

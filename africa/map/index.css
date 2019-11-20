@@ -11,7 +11,7 @@
 
 .game-africa .coin {
   position: absolute;
-  background-image: url('img/coin.jpg');
+  background-image: url('img/coin.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
