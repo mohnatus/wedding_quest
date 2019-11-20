@@ -91,7 +91,7 @@ class AustraliaGame {
   }
 
   win() {
-    this.trigger("win");
+    this.trigger("win", this.money * 3 / 2 + 100);
   }
 
   lose() {

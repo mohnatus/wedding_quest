@@ -75,6 +75,39 @@ let updateScreen = (() => {
   }
 
   return (data, nextCallback) => {
+    if (data.finish) {
+      document.querySelector('.game').style.display = "none";
+      document.querySelector('.quest-finish').style.display = "block";
+
+      window.points = Math.max(window.points, 2200);
+
+      document.querySelector('[data-points]').textContent = window.points;
+
+      let prices = document.querySelectorAll('[data-price]');
+
+      prices.forEach(el => {
+        let price = parseInt(el.dataset.price);
+        if (price > window.points) el.disabled = true;
+      })
+
+      document.addEventListener("click", e => {
+        if (e.target.hasAttribute('data-price')) {
+          let price = parseInt(e.target.dataset.price);
+          if (price <= window.points) {
+            window.points -= price;
+            document.querySelector('[data-points]').textContent = window.points;
+
+            prices.forEach(el => {
+              let price = parseInt(el.dataset.price);
+              if (price > window.points) el.disabled = true;
+            })
+          }
+          
+        }
+      })
+      return;
+    }
+
     if (!data) {
       hide(screen);
       return;

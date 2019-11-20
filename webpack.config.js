@@ -47,6 +47,6 @@ module.exports = {
     stats: 'errors-only',
     contentBase: __dirname,
     compress: true,
-    port: 9000
+    port: 8888
   }
 };

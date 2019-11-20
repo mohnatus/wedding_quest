@@ -8,6 +8,7 @@ class AmericaGame {
     new Dispatcher(this);
 
     this._points = 0;
+    this.time = 0;
 
     this.intersector = new game.Intersector();
 
@@ -15,13 +16,14 @@ class AmericaGame {
     this.table = game.GameTable({
       "time": {
         name: "Время",
-        value: 0
+        value: this.time
       },
-      "lives": {
-        name: "Жизни",
-        value: 3
-      }
     });
+
+    this.timer = setInterval(() => {
+      this.time++;
+      this.showTime();
+    }, 1000);
 
     /** Игровое поле */
     this.field = game.GameField(element, this.table.element);
@@ -57,6 +59,15 @@ class AmericaGame {
     document.body.onkeydown = (e) => {
       this._onKeydown(e)
     }
+  }
+
+  showTime() {
+    let min = Math.floor(this.time / 60);
+    let sec = this.time - min * 60;
+
+    this.table.update({
+      time: (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec),
+    });
   }
 
   _createMaze() {
@@ -121,7 +132,7 @@ class AmericaGame {
 
   win() {
     window.onkeydown = null;
-    this.trigger("win");
+    this.trigger("win", Math.floor(1000 / this.time + 100));
   }
   
 }

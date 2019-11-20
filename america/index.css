@@ -4,6 +4,32 @@
   width: 20px;
 }
 
+.game-america .game-field {
+  background: white;
+  position: relative;
+  overflow: visible;
+}
+
+.game-america .game-field > div {
+  position: relative;
+  background: white;
+}
+
+.game-america .game-field:before {
+  content: '';
+  position: absolute;
+  background: black;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: 0px;
+  z-index: 0;
+}
+
+.game-america .block {
+  z-index: 20;
+}
+
 .game-america .wall {
   background-color: #000;
 }

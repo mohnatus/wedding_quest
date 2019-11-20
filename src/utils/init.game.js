@@ -12,7 +12,7 @@ const createPlayground = (gameName) => {
   return el;
 };
 
-let points = 0;
+window.points = 0;
 
 const initGame = (gameName, callback) => {
   let playground = createPlayground(gameName);
@@ -43,6 +43,7 @@ const initGame = (gameName, callback) => {
   if (game) {
     game.once("win", (gamePoints) => {
       points += gamePoints;
+      console.log('new points', points);
       game = null;
       playground.remove();
       callback();

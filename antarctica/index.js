@@ -13,10 +13,10 @@ class AntarcticaGame {
   constructor(element, config = {}) {
     new Dispatcher(this);
 
-    this.startLives = config.lives || 10;
+    this.startLives = config.lives || 3;
 
     this._points = 0;
-    this.pointsToWin = 2;
+    this.pointsToWin = 10;
     this._lives = this.startLives;
 
     this.intersector = new game.Intersector();
@@ -92,7 +92,7 @@ class AntarcticaGame {
   }
 
   win() {
-    this.trigger("win");
+    this.trigger("win", this._lives * 100 + 100);
   }
 
   lose() {

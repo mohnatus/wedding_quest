@@ -77,7 +77,7 @@ class AfricaGame {
   }
 
   win() {
-    this.trigger("win");
+    this.trigger("win", this.points * 100 + 100);
   }
 
   lose() {
