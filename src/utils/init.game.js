@@ -48,6 +48,12 @@ const initGame = (gameName, callback) => {
       playground.remove();
       callback();
     });
+
+    window.skip = () => {
+      playground.remove();
+      game = null;
+      callback();
+    }
   }
 };
 

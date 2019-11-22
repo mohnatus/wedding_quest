@@ -86,7 +86,7 @@ let updateScreen = (() => {
       document.querySelector('.game').style.display = "none";
       document.querySelector('.quest-finish').style.display = "block";
 
-      window.points = Math.max(window.points, 2200);
+      window.points = Math.floor(Math.max(window.points, 2200));
 
       document.querySelector('[data-points]').textContent = window.points;
 
