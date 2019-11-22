@@ -22,4 +22,4 @@ const showScreen = (index) => {
   });
 }
 
-showScreen(24);
+showScreen(0);
