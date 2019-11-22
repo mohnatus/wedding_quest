@@ -75,6 +75,13 @@ let updateScreen = (() => {
   }
 
   return (data, nextCallback) => {
+    
+
+    if (!data) {
+      hide(screen);
+      return;
+    }
+
     if (data.finish) {
       document.querySelector('.game').style.display = "none";
       document.querySelector('.quest-finish').style.display = "block";
@@ -105,11 +112,6 @@ let updateScreen = (() => {
           
         }
       })
-      return;
-    }
-
-    if (!data) {
-      hide(screen);
       return;
     }
 

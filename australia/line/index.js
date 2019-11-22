@@ -73,13 +73,14 @@ class Line {
     this.bullets.length = 0;
     this.spots.forEach(spot => {
       if (spot.plant) spot.plant.remove();
+      spot.plant = null;
     })
     this.enemies.forEach(enemy => {
       enemy.remove();
     });
     this.enemies.length = 0;
-    
   }
+
 
   _onSelectSpot(spot) {
     if (spot.plant) return;

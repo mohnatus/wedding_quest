@@ -12,13 +12,16 @@ class Spot {
   set plant(plant) {
     
     this._plant = plant;
-    let view = this._plant.view;
-    this.element.appendChild(view);
+    if (this._plant) {
+      let view = this._plant.view;
+      this.element.appendChild(view);
 
-    this._plant.on('killed', () => {
-      this._plant = null;
-      view.remove();
-    })
+      this._plant.on('killed', () => {
+        this._plant = null;
+        view.remove();
+      })
+    }
+    
   }
   
   render() {

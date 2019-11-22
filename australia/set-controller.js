@@ -27,7 +27,9 @@ class SetController {
   }
 
   reset() {
-    this.game.lines.forEach(line => line.reset());
+    this.game.lines.forEach(line => {
+      line.reset();
+    });
     this.pause = true;
   }
 
